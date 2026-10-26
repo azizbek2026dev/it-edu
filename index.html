@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a35">
+  <title>IT Control — Senior IT Coordinator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">IT<span>+</span></div>
+        <div><strong>IT Control</strong><small>COORDINATION HUB</small></div>
+        <button class="icon-btn mobile-close" id="closeSidebar" aria-label="Menyuni yopish">×</button>
+      </div>
+      <div class="workspace"><span class="workspace-dot"></span><div><b>URFON Education</b><small>IT Operations</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">ISH MAYDONI</div>
+      <nav class="nav">
+        <button class="nav-item active" data-page="overview"><span class="nav-icon">▦</span> Boshqaruv paneli</button>
+        <button class="nav-item" data-page="tickets"><span class="nav-icon">◉</span> IT murojaatlar <em class="nav-count">8</em></button>
+        <button class="nav-item" data-page="assets"><span class="nav-icon">▣</span> Qurilmalar</button>
+        <button class="nav-item" data-page="tasks"><span class="nav-icon">✓</span> Vazifalar</button>
+        <button class="nav-item" data-page="team"><span class="nav-icon">♙</span> Jamoa va xodimlar</button>
+        <div class="nav-label nav-label-gap">TAHLIL VA SOZLAMALAR</div>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▤</span> Hisobotlar</button>
+        <button class="nav-item" data-page="knowledge"><span class="nav-icon">◇</span> Bilimlar bazasi</button>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span> Sozlamalar</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><div class="support-icon">✦</div><b>IT ish jarayoni</b><p>Jamoangiz ishini bir joydan nazorat qiling.</p><button id="quickHelp">Tezkor yordam <span>↗</span></button></div>
+        <div class="profile"><div class="avatar avatar-purple">AR</div><div class="profile-info"><b>IT Coordinator</b><small>Senior administrator</small></div><button class="dots" aria-label="Profil menyusi">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+        <div class="breadcrumb"><span>IT Operations</span><span class="crumb-sep">/</span><b id="breadcrumbCurrent">Boshqaruv paneli</b></div>
+        <div class="top-actions">
+          <label class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Qidirish..." aria-label="Sayt bo‘yicha qidirish"><kbd>Ctrl K</kbd></label>
+          <button class="icon-btn notification-btn" id="notifications" aria-label="Bildirishnomalar">♧<i></i></button>
+          <div class="top-avatar">AR</div>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="page-heading">
+          <div><div class="eyebrow"><span class="live-dot"></span> TIZIM HOLATI: BARQAROR</div><h1 id="pageTitle">Boshqaruv paneli <span class="wave">✦</span></h1><p id="pageSubtitle">Xush kelibsiz! Bugungi IT operatsiyalari holati bilan tanishing.</p></div>
+          <div class="heading-actions"><span class="date-chip" id="todayDate">26 Okt, 2026</span><button class="btn btn-secondary" id="exportBtn"><span>↓</span> Hisobot yuklash</button><button class="btn btn-primary" id="newTicket"><span>＋</span> Yangi murojaat</button></div>
+        </section>
+
+        <section class="stat-grid" aria-label="Asosiy ko‘rsatkichlar">
+          <article class="stat-card"><div class="stat-top"><span>Ochiq murojaatlar</span><span class="stat-icon purple">◉</span></div><div class="stat-value" id="openCount">24</div><div class="stat-foot"><span class="trend up">↗ 12.5%</span><span>o‘tgan haftaga nisbatan</span></div><div class="sparkline purple-line"><i style="height:28%"></i><i style="height:43%"></i><i style="height:35%"></i><i style="height:57%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:92%"></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>Faol qurilmalar</span><span class="stat-icon blue">▣</span></div><div class="stat-value">186<span class="stat-total">/ 194</span></div><div class="stat-foot"><span class="trend up">96%</span><span>tizimda faol</span></div><div class="progress"><span style="width:96%"></span></div></article>
+          <article class="stat-card"><div class="stat-top"><span>O‘rtacha javob vaqti</span><span class="stat-icon orange">◷</span></div><div class="stat-value">18<span class="unit"> min</span></div><div class="stat-foot"><span class="trend up">↓ 8.2%</span><span>tezroq javob</span></div><div class="mini-bars"><i style="height:65%"></i><i style="height:44%"></i><i style="height:71%"></i><i style="height:50%"></i><i style="height:32%"></i><i style="height:46%"></i><i style="height:24%"></i></div></article>
+          <article class="stat-card"><div class="stat-top"><span>SLA bajarilishi</span><span class="stat-icon green">✓</span></div><div class="stat-value">98.4<span class="unit">%</span></div><div class="stat-foot"><span class="trend up">+2.4%</span><span>maqsad: 95%</span></div><div class="sla-track"><span></span></div></article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel ticket-panel">
+            <div class="panel-head"><div><h2>So‘nggi IT murojaatlar</h2><p>Jamoa tomonidan kuzatilayotgan so‘nggi so‘rovlar</p></div><button class="text-btn" data-goto="tickets">Barchasini ko‘rish <span>→</span></button></div>
+            <div class="table-wrap"><table><thead><tr><th>MUROJAAT</th><th>USTUVORLIK</th><th>MAS’UL</th><th>HOLAT</th></tr></thead><tbody id="ticketRows">
+              <tr data-search="printer bosma qurilma dilshod"><td><div class="ticket-title"><span class="ticket-id">#IT-1048</span><b>Printer tarmoqqa ulanmayapti</b><small>Ma’muriyat · 12 daqiqa oldin</small></div></td><td><span class="priority high"><i></i> Yuqori</span></td><td><div class="assignee"><span class="avatar avatar-blue">DK</span><span>Dilshod K.</span></div></td><td><span class="status inprogress">Jarayonda</span></td></tr>
+              <tr data-search="wifi internet tarmoq madina"><td><div class="ticket-title"><span class="ticket-id">#IT-1047</span><b>Wi-Fi tezligi past</b><small>3-qavat · 35 daqiqa oldin</small></div></td><td><span class="priority urgent"><i></i> Shoshilinch</span></td><td><div class="assignee"><span class="avatar avatar-pink">MN</span><span>Madina N.</span></div></td><td><span class="status new">Yangi</span></td></tr>
+              <tr data-search="noutbuk windows yangilash sardor"><td><div class="ticket-title"><span class="ticket-id">#IT-1046</span><b>Noutbukni sozlash</b><small>O‘qituvchilar xonasi · 1 soat oldin</small></div></td><td><span class="priority medium"><i></i> O‘rtacha</span></td><td><div class="assignee"><span class="avatar avatar-green">SA</span><span>Sardor A.</span></div></td><td><span class="status waiting">Kutilmoqda</span></td></tr>
+              <tr data-search="email pochta akkaunt aziza"><td><div class="ticket-title"><span class="ticket-id">#IT-1045</span><b>Elektron pochta kirish muammosi</b><small>HR bo‘limi · 2 soat oldin</small></div></td><td><span class="priority low"><i></i> Past</span></td><td><div class="assignee"><span class="avatar avatar-orange">AT</span><span>Aziza T.</span></div></td><td><span class="status resolved">Yopilgan</span></td></tr>
+            </tbody></table></div>
+            <div class="panel-foot"><span><b id="ticketShown">4</b> ta so‘nggi murojaat ko‘rsatilmoqda</span><span class="table-pages">01 <span>/</span> 06 <button aria-label="Keyingi sahifa">→</button></span></div>
+          </article>
+
+          <article class="panel activity-panel">
+            <div class="panel-head"><div><h2>Faollik oqimi</h2><p>Jamoada so‘nggi yangilanishlar</p></div><button class="dots" aria-label="Faollik sozlamalari">···</button></div>
+            <div class="activity-list" id="activityList">
+              <div class="activity-item"><div class="activity-symbol activity-check">✓</div><div><p><b>Madina N.</b> murojaatni yopdi</p><span>IT-1039 · Login muammosi</span><small>10 daqiqa oldin</small></div></div>
+              <div class="activity-item"><div class="activity-symbol activity-device">▣</div><div><p>Yangi qurilma ro‘yxatga olindi</p><span>HP ProBook 450 G10 · #DEV-194</span><small>42 daqiqa oldin</small></div></div>
+              <div class="activity-item"><div class="activity-symbol activity-user">♙</div><div><p><b>Dilshod K.</b> vazifani qabul qildi</p><span>Server xonasini tekshirish</span><small>1 soat oldin</small></div></div>
+              <div class="activity-item"><div class="activity-symbol activity-alert">!</div><div><p>Backup holati tekshirildi</p><span>Oxirgi nusxa muvaffaqiyatli</span><small>2 soat oldin</small></div></div>
+            </div>
+            <button class="activity-more" id="moreActivity">Barcha faollikni ko‘rish <span>→</span></button>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel task-panel"><div class="panel-head"><div><h2>Bugungi vazifalar</h2><p>Kunlik reja va bajarilish holati</p></div><button class="text-btn" data-goto="tasks">Barchasi →</button></div>
+            <div class="task-progress"><div><b>Kunlik bajarilish</b><span>3 / 5 vazifa</span></div><div class="progress"><span style="width:60%"></span></div></div>
+            <div class="task-list">
+              <label class="task-row done"><input type="checkbox" checked><span class="fake-check">✓</span><span class="task-copy"><b>Server backup holatini tekshirish</b><small>Infratuzilma · 09:00</small></span><span class="task-tag tag-done">Bajarildi</span></label>
+              <label class="task-row done"><input type="checkbox" checked><span class="fake-check">✓</span><span class="task-copy"><b>Yangi xodim uchun akkaunt ochish</b><small>Hisoblar · 10:30</small></span><span class="task-tag tag-done">Bajarildi</span></label>
+              <label class="task-row"><input type="checkbox"><span class="fake-check">✓</span><span class="task-copy"><b>3-qavat Wi-Fi qamrovini tekshirish</b><small>Tarmoq · 14:00</small></span><span class="task-tag tag-today">Bugun</span></label>
+            </div>
+          </article>
+          <article class="panel assets-panel"><div class="panel-head"><div><h2>Qurilmalar holati</h2><p>Inventarizatsiya bo‘yicha umumiy ko‘rinish</p></div><button class="text-btn" data-goto="assets">Inventar →</button></div>
+            <div class="asset-summary"><div class="donut"><div><b>194</b><small>Jami</small></div></div><div class="asset-legend"><div><i class="legend-dot dot-green"></i><span>Faol</span><b>186 <small>96%</small></b></div><div><i class="legend-dot dot-orange"></i><span>Ta’mirda</span><b>5 <small>2.6%</small></b></div><div><i class="legend-dot dot-gray"></i><span>Zaxirada</span><b>3 <small>1.4%</small></b></div></div></div>
+            <div class="asset-types"><div><span>💻</span><div><b>Kompyuterlar</b><small>112 ta qurilma</small></div><strong>112</strong></div><div><span>📶</span><div><b>Tarmoq qurilmalari</b><small>Router, switch, AP</small></div><strong>28</strong></div><div><span>🖨️</span><div><b>Printerlar</b><small>Ofis va sinf xonalari</small></div><strong>18</strong></div></div>
+          </article>
+        </section>
+        <footer class="footer"><span>© 2026 IT Control. Ichki foydalanish uchun.</span><span><i class="live-dot"></i> Barcha tizimlar ishlayapti <span class="footer-sep">·</span> v1.0.0</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="ticketDialog" class="modal">
+    <form method="dialog" id="ticketForm">
+      <div class="modal-head"><div><span class="modal-kicker">IT SERVICE DESK</span><h2>Yangi murojaat yaratish</h2></div><button class="icon-btn" value="cancel" aria-label="Yopish">×</button></div>
+      <label class="field-label">Murojaat mavzusi<input name="subject" required placeholder="Masalan: Kompyuter ishga tushmayapti"></label>
+      <div class="field-row"><label class="field-label">Bo‘lim<select name="department"><option>Ma’muriyat</option><option>O‘qituvchilar</option><option>IT bo‘limi</option><option>HR</option><option>Buxgalteriya</option></select></label><label class="field-label">Ustuvorlik<select name="priority"><option>O‘rtacha</option><option>Yuqori</option><option>Shoshilinch</option><option>Past</option></select></label></div>
+      <label class="field-label">Tavsif<textarea name="description" rows="3" placeholder="Muammo haqida qisqacha yozing..."></textarea></label>
+      <div class="modal-actions"><button class="btn btn-secondary" value="cancel">Bekor qilish</button><button class="btn btn-primary" id="submitTicket" value="submit">Murojaatni yaratish</button></div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
